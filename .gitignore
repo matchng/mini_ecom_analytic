@@ -1,0 +1,19 @@
+# System
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Docker
+pgdata/
+*.log
+
+# Secrets/env
+.env
+.devcontainer/.env
+
+# SQL dumps
+*.sql.bak
+*.dump

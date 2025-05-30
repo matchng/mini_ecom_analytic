@@ -1,0 +1,9 @@
+{
+    "name": "Ecommerce Postgres Dev",
+    "dockerComposeFile": "../docker-compose.yml",
+    "service": "postgres",
+    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+    "forwardPorts": [5432, 8080],
+    "postCreateCommand": "echo 'Container is ready!'"
+  }
+  
