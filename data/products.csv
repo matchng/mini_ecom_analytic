@@ -1,0 +1,11 @@
+product_id,name,category,price
+101,Widget A,Widgets,19.99
+102,Widget B,Widgets,29.99
+103,Widget C,Widgets,24.5
+104,Widget D,Widgets,34.75
+201,Gadget X,Gadgets,49.5
+202,Gadget Y,Gadgets,89.0
+203,Gadget Z,Gadgets,59.99
+204,Gadget Q,Gadgets,69.99
+301,Doohickey P,Doohickeys,9.99
+302,Doohickey Q,Doohickeys,14.99

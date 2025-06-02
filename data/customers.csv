@@ -1,0 +1,11 @@
+customer_id,name,signup_date,region
+1,Alice,2023-01-01,North
+2,Bob,2023-01-16,West
+3,Carol,2023-01-31,South
+4,Dan,2023-02-15,East
+5,Eve,2023-03-02,North
+6,Frank,2023-03-17,West
+7,Grace,2023-04-01,South
+8,Heidi,2023-04-16,East
+9,Ivan,2023-05-01,North
+10,Judy,2023-05-16,West
