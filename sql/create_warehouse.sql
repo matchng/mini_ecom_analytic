@@ -15,7 +15,7 @@ DROP TABLE IF EXISTS dim_products;
 
 CREATE TABLE dim_products AS (
 	SELECT product_id,
-		   LOWER(TRIM(name)) AS product_name,
+		   INITCAP(TRIM(name)) AS product_name,
 		   TRIM(category) AS product_category,
 		   price,
 		   price IS NULL AS is_missing_price
@@ -45,11 +45,15 @@ CREATE TABLE fact_orders AS (
 ALTER TABLE fact_orders 
 ADD PRIMARY KEY (order_item_id);
 
-
 -- Add foreign key from fact_orders.customer_id to dim_customers.customer_id
 ALTER TABLE fact_orders 
-ADD CONSTRAINT fk_customer_id 
+ADD CONSTRAINT fk_customer
 FOREIGN KEY (customer_id) REFERENCES dim_customers (customer_id);
+
+-- Add foreign key for product_id
+ALTER TABLE fact_orders 
+ADD CONSTRAINT fk_product
+FOREIGN KEY (product_id) REFERENCES dim_products(product_id);
 
 -- Add index on order_date to speed up time-based queries
 CREATE INDEX IF NOT EXISTS idx_order_date ON fact_orders(order_date);
