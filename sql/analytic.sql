@@ -18,4 +18,36 @@ SELECT
 FROM fact_orders fo
 JOIN dim_products dp ON fo.product_id = dp.product_id;
 
---Top 5 Products by Revenue
+--Top 5 Products by Sales
+SELECT 
+	p.product_name,
+	SUM(fo.total_sales) as total_revenue
+FROM dim_products p JOIN fact_orders fo
+	ON p.product_id = fo.product_id
+GROUP BY p.product_name
+ORDER BY total_revenue DESC
+LIMIT 5;
+
+--Top 5 Products per Region
+WITH ranked_region_products AS (
+	SELECT 
+		p.product_name,
+		c.region,
+		SUM(fo.total_sales) as total_revenue,
+		DENSE_RANK() OVER(PARTITION BY c.region ORDER BY SUM(fo.total_sales) desc) as ranked_product
+	FROM dim_products p JOIN fact_orders fo 
+		ON p.product_id = fo.product_id
+	JOIN dim_customers c
+		ON fo.customer_id = c.customer_id
+	GROUP BY c.region, p.product_name
+)
+
+SELECT 
+	product_name,
+	region,
+	total_revenue,
+	ranked_product
+FROM ranked_region_products
+WHERE ranked_product BETWEEN 1 and 5
+ORDER BY region, ranked_product;
+
