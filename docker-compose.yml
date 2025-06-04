@@ -27,13 +27,6 @@ services:
   metabase:
     image: metabase/metabase
     restart: always
-    environment:
-      MB_DB_TYPE: postgres
-      MB_DB_DBNAME: ecommerce
-      MB_DB_PORT: 5432
-      MB_DB_USER: pguser
-      MB_DB_PASS: pgpassword
-      MB_DB_HOST: postgres  # Use the service name here
     ports:
       - "3000:3000"
     depends_on:
