@@ -8,23 +8,25 @@ ORDER BY sale_month;
 
 -- Running Total Revenue By Product
 SELECT
+	fo.order_item_id,
 	dp.product_id,
 	dp.product_name,
 	fo.order_date,
 	fo.product_price,
 	fo.quantity,
 	fo.total_sales,
-	SUM (fo.total_sales) OVER(PARTITION BY dp.product_id ORDER BY fo.order_date) as running_total
+	SUM (fo.total_sales) OVER(PARTITION BY dp.product_id ORDER BY fo.order_date, fo.order_item_id) as running_total
 FROM fact_orders fo
 JOIN dim_products dp ON fo.product_id = dp.product_id;
 
 --Top 5 Products by Sales
-SELECT 
+SELECT
+	p.product_id,
 	p.product_name,
 	SUM(fo.total_sales) as total_revenue
 FROM dim_products p JOIN fact_orders fo
 	ON p.product_id = fo.product_id
-GROUP BY p.product_name
+GROUP BY p.product_id,p.product_name
 ORDER BY total_revenue DESC
 LIMIT 5;
 
