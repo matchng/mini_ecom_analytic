@@ -3,7 +3,7 @@
     "dockerComposeFile": "../docker-compose.yml",
     "service": "postgres",
     "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
-    "forwardPorts": [5432, 8080],
+    "forwardPorts": [5432, 8080, 3000],
     "postCreateCommand": "echo 'Container is ready!'"
   }
   
