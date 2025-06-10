@@ -35,7 +35,7 @@ CREATE TABLE fact_orders AS (
 		oi.product_id,
 		p.price AS product_price,
 		oi.quantity AS quantity,
-		(oi.quantity * p.price) AS total_sales
+		(oi.quantity * p.price) AS sales_amount
 	FROM orders o 
 	JOIN order_items oi ON o.order_id = oi.order_id 
 	JOIN products p ON oi.product_id = p.product_id	
