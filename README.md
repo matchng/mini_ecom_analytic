@@ -28,7 +28,7 @@ To run this project locally:
 
 1. **Clone the repository**:
 ```bash
-   git clone https://github.com/yourusername/mini_ecom_analytic.git
+   git clone https://github.com/matchng/mini_ecom_analytic.git
    cd mini_ecom_analytic
 ```
 
@@ -42,7 +42,7 @@ To run this project locally:
 ```bash 
     docker compose up --build
 ```
-4. **Access the tools as below:**
+4. **Access the tools:**
     pgAdmin: http://localhost:8080
     Metabase: http://localhost:3000
 
