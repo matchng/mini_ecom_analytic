@@ -27,19 +27,43 @@ The diagram below illustrates the overall architecture of this project and how e
 To run this project locally:
 
 1. **Clone the repository**:
+```bash
    git clone https://github.com/yourusername/mini_ecom_analytic.git
-   
    cd mini_ecom_analytic
+```
 
 2. **Create your own environment file**
     Copy the .env example file and customize it as needed.
-   
+```bash
     cp .env.example .env
+```
 
 3. **Start the services using Docker Compose**
+```bash 
     docker compose up --build
-
+```
 4. **Access the tools as below:**
     pgAdmin: http://localhost:8080
     Metabase: http://localhost:3000
 
+## Data Ingestion & Preparation
+
+1. **Load Raw Data into PostgreSQL**
+
+Use the SQL scripts to create the schema and import the sample data via pgAdmin or psql:
+
+```bash
+psql -h localhost -U {POSTGRES_USER} -d ecommerce -f sql/create_table.sql
+psql -h localhost -U {POSTGRES_USER} -d ecommerce -f sql/load_data.sql
+```
+These scripts create staging tables and populate them with simulated e-commerce data.
+
+2. **Clean & Transform the Data**
+
+Run the transformation script to create a cleaned data warehouse layer:
+
+```bash 
+psql -h localhost -U {POSTGRES_USER} -d ecommerce -f sql/create_warehouse.sql
+```
+
+This step creates dimension and fact tables including dim_customers, dim_products and fact_orders for downstream analytics.
