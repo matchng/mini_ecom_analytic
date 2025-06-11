@@ -15,3 +15,9 @@ The objective is to gain hands-on, practical experience with key tools in the mo
 | **Metabase**                | Data visualization tool used for data exploration and building dashboards                                         |
 | **Docker & Docker Compose** | Containerized setup to run PostgreSQL, pgAdmin, and Metabase in isolated, reproducible environments               |
 | **SQL**                     | Used for data transformation, aggregation and analysis                                                            |
+
+## Project Architecture
+
+The diagram below illustrates the overall architecture of this project and how each component interacts with one another.
+
+![Project Architecture](./asset/mini_ecom_architech.drawio.svg)
