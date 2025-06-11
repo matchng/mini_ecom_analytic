@@ -21,3 +21,25 @@ The objective is to gain hands-on, practical experience with key tools in the mo
 The diagram below illustrates the overall architecture of this project and how each component interacts with one another.
 
 ![Project Architecture](./asset/mini_ecom_architech.drawio.svg)
+
+## 🛠️ Setup & Getting Started 
+
+To run this project locally:
+
+1. **Clone the repository**:
+   git clone https://github.com/yourusername/mini_ecom_analytic.git
+   
+   cd mini_ecom_analytic
+
+2. **Create your own environment file**
+    Copy the .env example file and customize it as needed.
+   
+    cp .env.example .env
+
+3. **Start the services using Docker Compose**
+    docker compose up --build
+
+4. **Access the tools as below:**
+    pgAdmin: http://localhost:8080
+    Metabase: http://localhost:3000
+
