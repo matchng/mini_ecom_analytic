@@ -78,35 +78,35 @@ Below are the key visualizations and insights created in Metabase.
 
 ### 1. Top Customers by Revenue Contribution  
 - **Question:** *Which customers generate the most sales, and what share of total revenue do they each account for?*
-![Top Customers by Revenue Contribution](assets/customers-revenue.png)  
+![Top Customers by Revenue Contribution](./asset/customers_revenue.png)  
 - **Insight:** Ivan (32.7%) and Heidi (30.1%) together drive over 60% of total revenue.  
 
 ---
 
 ### 2. Top 5 Products by Region 
 - **Question:** *What are the top-selling products in each region?* 
-![Top 5 Products by Region](assets/Top5-Products-per-Region.png)  
+![Top 5 Products by Region](./asset/top5_products_per_region.png)  
 - **Insight:** In East/North regions, Gadget Q & Gadget Y dominate; South is led by Widget B; West by Widget D & Gadget Z.  
 
 ---
 
 ### 3. Sales Breakdown by Product Category 
 - **Question:** *How is total revenue distributed across product categories?* 
-![Sales Breakdown by Product Category](assets/revenue-by-category.png)  
+![Sales Breakdown by Product Category](./asset/revenue_by_category.png)  
 - **Insight:** Gadgets account for 61.7%, Widgets 33.0%, Doohickeys 5.3% of total revenue.  
 
 ---
 
 ### 4. Daily Sales & Cumulative Revenue Over Time  
 - **Question:** *How does daily revenue fluctuate, and how does that add up over the period?*
-![Daily vs. Cumulative Sales](assets/daily-vs-cumulative.png)  
+![Daily vs. Cumulative Sales](./asset/daily_vs_cumulative.png)  
 - **Insight:** Steady revenue growth from April to May, with spikes on Apr 14 (≈693) and May 22 (≈538); cumulative hits 2,706.83.  
 
 ---
 
 ### 5. Top 5 Products by Total Sales 
 - **Question:** *Which products generated the most revenue overall?* 
-![Top 5 Products by Total Sales](assets/top5-products.png)  
+![Top 5 Products by Total Sales](./asset/top5_products.png)  
 - **Insight:** Leading products are Gadget Q (~630), Gadget Y (~623), Widget D (~382), Widget B (~330), Gadget X (~297).  
 
 ---
