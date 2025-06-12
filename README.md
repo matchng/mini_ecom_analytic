@@ -83,6 +83,11 @@ psql -h localhost -U {POSTGRES_USER} -d ecommerce -f sql/create_warehouse.sql
 This step creates dimension and fact tables including dim_customers, dim_products and fact_orders for downstream analytics.
 
 ## 📊 Metabase Dashboards & Insights
+### Dashboard Overview
+
+Here’s the main dashboard layout that brings together all key insights:
+
+![Dashboard Overview](./asset/dashboard_overview.png)
 
 Below are the key visualizations and insights created in Metabase.
 
