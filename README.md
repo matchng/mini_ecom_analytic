@@ -64,7 +64,7 @@ All of the raw SQL used for this project in the `sql` directory:
 
 1. **Load Raw Data into PostgreSQL**
 
-Use the SQL scripts to create the schema and import the sample data via pgAdmin or psql:
+Use the SQL scripts to create the schema and import the sample data:
 
 ```bash
 psql -h localhost -U {POSTGRES_USER} -d ecommerce -f sql/create_table.sql
