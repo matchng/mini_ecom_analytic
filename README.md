@@ -46,7 +46,21 @@ To run this project locally:
     pgAdmin: http://localhost:8080
     Metabase: http://localhost:3000
 
-## Data Ingestion & Preparation
+## Data Ingestion & Preparation & Exploration
+
+All of the raw SQL used for this project in the `sql` directory:
+
+- **`sql/create_table.sql`**  
+  Creates the initial staging tables (customers, products, orders, order_items).
+
+- **`sql/load_data.sql`**  
+  Imports the CSV files into those staging tables.
+
+- **`sql/create_warehouse.sql`**  
+  Transforms staging into analytics-ready tables (`dim_customers`, `dim_products`, `fact_orders`).
+
+- **`sql/analytic.sql`**  
+  Contains every query used to generate key business insights like running totals, top-N rankings, percentage of total etc.
 
 1. **Load Raw Data into PostgreSQL**
 
@@ -67,10 +81,6 @@ psql -h localhost -U {POSTGRES_USER} -d ecommerce -f sql/create_warehouse.sql
 ```
 
 This step creates dimension and fact tables including dim_customers, dim_products and fact_orders for downstream analytics.
-
-3. **Explore the Data**
-
-sql/analytics.sql contains all the queries I have used for my analysis the data and create Metabase charts
 
 ## 📊 Metabase Dashboards & Insights
 
